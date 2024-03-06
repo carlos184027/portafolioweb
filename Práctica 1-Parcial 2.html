@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORMULARIO</title>
+	<meta name="Carlos Enrique López Núñez" content="UPSLP">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="Imagenes/logo.png">
+</head>
+<body>
+	<header>
+		<h1 align="center">Venta en línea</h1>
+	</header>
+	<form method="post" action="" enctype="text/plain" >
+
+		<fieldset>
+			<legend>Información general</legend>
+
+			<table align="center" style=" border: 2px ;  width: 70%;">
+		    	<tbody>
+					<tr>
+						<td>
+					    	<label for="nombre">Nombre:</label><br>
+			            	<input type="text" name="nombre" id="nombre" placeholder="Nombre" title="Nombre" maxlength="40" required>		
+			        	</td>
+			       		<td>
+			        		<label for="nombre">Apellido paterno:</label><br>
+			            	<input type="text" name="apellido" id="apellido" placeholder="Apelido paterno" title="Apellido paterno" maxlength="40">
+			        	</td>
+			        	<td>
+			        		<label for="nombre">Apellido materno:</label><br>
+			            	<input type="text" name="apellidoM" id="apellidoM" placeholder="Apelido materno" title="Apellido materno" >
+			       		</td>
+					</tr>
+					<tr>
+						<td>
+					    	<label for="nombre">Nombre de usuario:</label><br>
+			            	<input type="text" name="nombreU" id="nombreU" placeholder="Usuario" title="Usuario" maxlength="40" required>		
+			       		</td>
+			        	<td>
+			        		<label for="pass">Contraseña:</label><br>
+			            	<input type="password" name="pass" id="pass" placeholder="Password" title="Password" maxlength="25" size="15" required>
+			        	</td>
+			        	<td> 	
+				        	<label for="">Fecha de Nacimiento:</label><br> 
+				        	<input type="date" name="Fechan" id="Fechan" title="Fecha de nacimiento">
+			        	</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos de facturación</legend>
+
+			<table align="center" style=" border: 2px ;  width: 70%;">
+				<tbody>					
+					<tr>
+						<td>
+							<label for="pais">País:</label><br>
+							<select name="pais" id="pais" multiple size="3">
+								<option>México</option>
+								<option>Cánada</option>
+								<option>E.U.A</option>				
+								<option>Francia</option>
+								<option>Colombia</option>
+							</select>	
+						</td>
+						<td>
+							<label for="ciudad">Ciudad:</label><br>
+							<select name="ciudad" id="ciudad" multiple size="3">
+								<option>San Luis Potosí</option>
+								<option>Matehuala</option>
+								<option>Cd. Valles</option>				
+								<option>Escalerillas</option>
+								<option>Tamazopo</option>
+							</select>	
+						</td>
+						<td>
+							<label for="calle">Calle:</label><br>
+			            	<input type="text" name="calle" id="calle" placeholder="Calle" title="Calle" maxlength="50">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="numeroC">Número de casa:</label><br>
+			            	<input type="number" name="numeroC" id="numeroC" placeholder="Numero exterior" title="Numero exterior" maxlength="50">
+						</td>
+						<td>
+							<label for="colonia">Colonia:</label><br>
+			            	<input type="text" name="numeroC" id="numeroC" placeholder="Colonia" title="Colonia" maxlength="50">
+						</td>
+						<td>
+							<label for="correo">E-mail:</label><br>
+			            	<input type="email" name="correo" id="correo" placeholder="E-mai" title="E-mail" maxlength="50" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="rfc">R.F.C. :</label><br>
+			            	<input type="text" name="rfc" id="rfc" placeholder="R.F.C" title="R.F.C" maxlength="50" required>
+						</td>
+						<td>
+							<label for="cp">C.P. :</label><br>
+			            	<input type="number" name="cp" id="cp" placeholder="Código postal" title="Código postal" maxlength="50" required>
+						</td>
+						<td>
+							<input type="submit" name="envio" id="envio" value="Enviar">
+							<input type="reset" name="Borrar" id="Borrar" value="Restablecer">							
+						</td>
+					</tr>		
+				</tbody>		
+			</table>
+		</fieldset>
+   	</form>
+
+</body>
+</html>
