@@ -1,0 +1,46 @@
+.barlow{
+	font-family: "Barlow", sans-serif;
+	font-weight: 40px;
+	font-style: normal;
+	text-align: center;
+	border: outset 5px;
+	border-color: #A10D86;
+	border-width: medium;
+	border-radius: 5px;
+	border-style: groove;
+	background-color: white;
+}
+
+
+
+h2{
+	font-family: "Barlow", sans-serif;
+  	font-weight: 35px;
+  	font-style: normal;
+}
+
+.par-impar:nth-of-type(odd) {
+    font-family: "Barlow", sans-serif;
+	font-size: 20px;
+	border: outset 15px;
+	background-color: #00A2FF;
+	border-width:medium;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+.par-impar:nth-of-type(even) {
+    font-family: "Barlow", sans-serif;
+	font-size: 20px;
+	border: outset 5px;
+	background-color: #CD96FE;
+	border-width:medium;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px; /* Ajusta según sea necesario */
+    margin-bottom: 20px; /* Ajusta según sea necesario */
+}
