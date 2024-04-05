@@ -1,0 +1,28 @@
+#contenedor{
+    text-align: center;
+    padding: 20px;
+    margin: 25px auto;
+    background-color: lightgray;  
+    width: 750px;
+}
+
+#cont{
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    text-align:left;
+    font-family: Arial, sans-serif; 
+}
+
+#cont label, #cont input{
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-color: #CFD0D1;
+    box-shadow: none;
+}
+
+
+.boton{
+	background-color: lightblue;
+	border-color: #CFD0D1;
+}
