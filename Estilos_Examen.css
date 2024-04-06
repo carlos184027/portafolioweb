@@ -1,0 +1,96 @@
+body{
+    margin: 40px auto 0 50px;
+    padding: 25px;
+    font-family: Arial;
+}
+
+
+#logo{
+	font-family: arial;
+	font-size: 25px;
+}
+
+ul{
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	font-family: arial;
+	font-size: 15px;
+
+}
+
+li{
+	float: left;
+	margin: 5px;	
+	background-size: 15%;
+	border-right: 1px solid white;
+}
+
+a li{
+	text-decoration: none;
+	color: black;
+	background-color: #BB4BFF;
+	width: 180px;
+	text-align: center;
+	margin: 5px auto;
+	padding: 20px 20px;
+}
+
+a li:hover{
+	background-color: #CD7AFF;
+}
+
+article {
+	margin-left: 51px;
+    width: 650px;
+    float: left;
+}
+
+#der {
+	margin-right: 270px;
+    width: 150px;
+    float: right;
+    margin-left: 50px;
+}
+
+h1{
+	background-color: #BB4BFF;
+	text-align: center;
+	padding: 20px 20px;
+	width: 200px; 
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#i1{
+	width: 215px;
+	padding: 10px 10px;
+	box-shadow: rgba(0,0,0,0) 0px 0px;
+}
+
+#i2{
+	margin-top: 8px;
+	width: 215px;
+	padding: 10px 10px;
+	box-shadow: rgba(0,0,0,0) 0px 0px;
+}
+
+#i3{
+	margin-top: 8px;
+	padding: 10px 10px;
+	width: 239px;
+	background-color: #BB4BFF;
+}
+
+#i3:hover{
+	background-color: #CD7AFF;
+}
