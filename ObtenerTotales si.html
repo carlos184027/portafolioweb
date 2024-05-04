@@ -17,7 +17,7 @@
 </head>
 
 <script>
-var total;
+var total=0;
 function califica()
     {var total=0;
         //Evalua cada pregunta
@@ -45,32 +45,28 @@ function califica()
     }
 
  
-function generar(){
+function generar() {
+    // Crear un objeto o instancia jsPDF
+    var doc = new jsPDF();
 
-//Crear un objeto o instancia jsPDF
-var doc = new jsPDF();
+    // Agregar texto al PDF
+    doc.setFontSize(40);
+    doc.setTextColor(9, 7, 121);
+    doc.text(40, 20, "Conceptos básicos");
+    doc.setTextColor(17, 122, 209);
+    doc.setFontSize(30);
+    doc.text(50, 35, "Resultados del test");
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(10);
+    doc.text(20, 50, "Puntos obtenidos: " + total + " puntos");
 
-//Definir el tamaño de la letra
-doc.setFontSize(40);
-//Color del texto
-doc.setTextColor(9,7,121);
-doc.text(40, 20, "Conceptos basicos");
-doc.setTextColor(17, 122, 209); //Color en formato RGB
-doc.setFontSize(30);
-doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
-doc.setTextColor(0,0,0);
-doc.setFontSize(10);
-doc.text(20, 50, "50 puntos. Muy bien. \r Todas tus respuestas son correctas");
-doc.text(20, 70, "30 puntos. Regular. \r Obtuviste 6 preguntas correctas");
-doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+    // Convertir el PDF a una cadena de datos URL para visualización
+    var string = doc.output('datauristring');
 
-//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
-
-var string = doc.output('datauristring');
-
-$('iframe').attr('src', string);
-
+    // Mostrar el PDF en un iframe
+    $('iframe').attr('src', string);
 }
+
 </script>
 
 <body>
