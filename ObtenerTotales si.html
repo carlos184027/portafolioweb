@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos_examen2.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>    
+</head>
+
+<script>
+var total;
+function califica()
+    {var total=0;
+        //Evalua cada pregunta
+        for (var x=1;x<=10;x++)
+        {
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==50)
+            document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+            if(total==30)
+            document.getElementById("comentario").innerHTML="Regular!!";
+        else
+            if(total<=25)
+            document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "50 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "30 puntos. Regular. \r Obtuviste 6 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+    <h1>Responde la encuesta</h1>
+    <h2>Tu opinión es importante</h2>
+<div>
+    <form>
+    <ul>
+
+        <li>1-¿Qué es Big Data?</li>
+        <input type="radio" name="r1" id="r1" value="0"/>Big data es una técnica para reducir el tamaño de los conjuntos de datos, lo cual facilita su almacenamiento y análisis en sistemas informáticos convencionales.<br>
+        <input type="radio" name="r1" id="r1" value="0"/>Big data es un método para predecir el futuro con total certeza basado en el análisis de grandes cantidades de datos históricos.<br>
+        <input type="radio" name="r1" id="r1" value="5"/>Big Data son conjuntos de datos cuyo tamaño o tipo tiene una capacidad superior para capturar, gestionar y procesar los datos<br>
+        <input type="radio" name="r1" id="r1" value="0"/>Big data es un término utilizado para describir una serie de algoritmos de inteligencia artificial diseñados específicamente para trabajar con conjuntos de datos pequeños y medianos.<br><br>
+        
+        <li>2-¿Qué permite el analisis de datos?</li>
+		<input type="radio" name="r2" id="r2" value="5"/>El análisis de datos permite a los analistas, investigadores y usuarios de negocio mejorar y agilizar las decisiones, utilizando datos que antes eran inaccesibles o inutilizables.<br>
+		<input type="radio" name="r2" id="r2" value="0"/>El análisis de datos permite la manipulación directa de la realidad física, alterando eventos en el mundo real a través de la modificación de los datos.<br>
+		<input type="radio" name="r2" id="r2" value="0"/>El análisis de datos permite la creación de universos alternativos donde las leyes de la física y la lógica pueden ser reescritas a voluntad.<br>
+		<input type="radio" name="r2" id="r2" value="0"/>El análisis de datos permite la comunicación telepática entre individuos, transmitiendo información directamente desde las mentes de una persona a otra sin necesidad de palabras o señales físicas.<br><br>
+
+		<li>3-¿Cuándo surge el Big Data?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Décadas de 1940 y 1950<br>
+		<input type="radio" name="r3" id="r3" value="5"/>Décadas de 1960 y 1970<br>
+		<input type="radio" name="r3" id="r3" value="0"/>Décadas de 1980 y 1990<br>
+		<input type="radio" name="r3" id="r3" value="0"/>Décadas de 1930 y 1940<br><br>
+
+        <li>4-¿En qué año las personas se dieron cuenta que se generaron una gran cantidad de datos en redes sociales?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>2000<br>
+		<input type="radio" name="r4" id="r4" value="0"/>2007<br>
+		<input type="radio" name="r4" id="r4" value="0"/>2010<br>
+		<input type="radio" name="r4" id="r4" value="5"/>2005<br><br>
+
+		<li>5-¿Porque se caracteriza el Big Data?</li>
+		<input type="radio" name="r5" id="r5" value="0"/>Crear inteligencia artificia<br>
+		<input type="radio" name="r5" id="r5" value="0"/>Capacidad para predecir eventos sobrenaturales<br>
+		<input type="radio" name="r5" id="r5" value="0"/>Capacidad para viajar en el tiempo<br>
+		<input type="radio" name="r5" id="r5" value="5"/>Por su gran tamaño<br><br>
+
+		<li>6-¿En qué area se puede utilizar Big Data?</li>
+		<input type="radio" name="r6" id="r6" value="5"/>Marketing y ventas<br>
+		<input type="radio" name="r6" id="r6" value="0"/>Crear portales<br>
+		<input type="radio" name="r6" id="r6" value="0"/>Viajar en el tiempo<br>
+		<input type="radio" name="r6" id="r6" value="0"/>Manipular pensamientos<br><br>
+
+		<li>7-¿De qué sirve el Big Data contra el crimen?</li>
+		<input type="radio" name="r7" id="r7" value="5"/>Pueden predecir la probabilidad de que se produzca un crimen en una zona determinada<br>
+		<input type="radio" name="r7" id="r7" value="0"/>Permite predecir con exactitud quién cometerá un crimen en el futuro, eliminando así la necesidad de juicios y sistemas legales<br>
+		<input type="radio" name="r7" id="r7" value="0"/>Puede crear una "policía virtual" capaz de detener delitos antes de que ocurran mediante la vigilancia constante de todas las personas en tiempo real<br>
+		<input type="radio" name="r7" id="r7" value="0"/>Puede ser utilizado para controlar la mente de los criminales y obligarlos a detenerse en sus acciones delictivas mediante el uso de técnicas de manipulación psicológica avanzada<br><br>
+
+		<li>8-¿Qué marco de código abierto ayudo a desarrollar el Big Data?</li>
+		<input type="radio" name="r8" id="r8" value="0"/>C<br>
+		<input type="radio" name="r8" id="r8" value="0"/>C++<br>
+		<input type="radio" name="r8" id="r8" value="5"/>Haddop<br>
+		<input type="radio" name="r8" id="r8" value="0"/>HTML<br><br>
+
+		<li>9-¿De qué sirve el Big Data en deportes?</li>
+		<input type="radio" name="r9" id="r9" value="5"/>Para definir las estrategias a utilizar en cada partido, prevenir lesiones de los jugadores, conocer las preferencias de los aficionados, etc..<br>
+		<input type="radio" name="r9" id="r9" value="0"/>Permite modificar genéticamente a los atletas para mejorar su rendimiento físico y habilidades deportivas<br>
+		<input type="radio" name="r9" id="r9" value="0"/>Permite predecir con certeza absoluta el resultado de cada evento deportivo, eliminando así la incertidumbre y la emoción de la competición<br>
+		<input type="radio" name="r9" id="r9" value="0"/>Permite crear equipos deportivos completamente virtuales, donde los atletas son generados por algoritmos y compiten en entornos simulados<br><br>
+
+		<li>10-¿Cuál de estos tipos de datos no utiliza el Big Data?</li>
+		<input type="radio" name="r10" id="r10" value="0"/>Datos estructurados<br>
+		<input type="radio" name="r10" id="r10" value="0"/>Datos semi-estructurados<br>
+		<input type="radio" name="r10" id="r10" value="5"/>Datos físicos<br>
+		<input type="radio" name="r10" id="r10" value="0"/>Datos no estructurados<br>
+
+    </ul>
+</form>
+</div>
+
+<!-- Botón para regresar al archivo proyecto_final.html -->
+<a href="Proyecto final.html" class="button">Regresar al proyecto final</a><br><br>
+
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br><br>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+
+</body>
+</html>
+
+		
+		
