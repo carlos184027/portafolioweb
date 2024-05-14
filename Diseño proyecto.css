@@ -37,4 +37,14 @@ div p:nth-child(even){
 	border-radius:5px;
 }
 
+.imag1{
+    display: block;
+    margin: 0 auto;
+    max-width: 95%;
+    height: auto;
+ 
+}
 
+.imageC{
+	   margin-bottom: 20px;
+}

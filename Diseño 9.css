@@ -1,0 +1,22 @@
+.titulo{
+	background-color: white;
+	font-family: "Barlow", sans-serif;
+    font-weight: 40px;
+  	font-style: normal;
+  	text-align: center;
+  	border: outset 5px;
+  	border-color: #A10D86;
+  	border-width: medium;
+  	border-radius: 5px;
+  	border-style: groove;
+}
+
+.sub{
+  	font-family: "Barlow", sans-serif;
+  	font-weight: 35px;
+  	font-style: normal;
+}
+
+iframe{
+  text-align: center;
+}
