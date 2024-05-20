@@ -51,14 +51,14 @@ function generar() {
 
     // Agregar texto al PDF
     doc.setFontSize(40);
-    doc.setTextColor(9, 7, 121);
-    doc.text(40, 20, "Conceptos básicos");
-    doc.setTextColor(17, 122, 209);
+    doc.setTextColor(0, 0, 0);
+    doc.text(20, 10, "Examen de conocimientos");
+    doc.setTextColor(0, 0, 0);
     doc.setFontSize(30);
     doc.text(50, 35, "Resultados del test");
     doc.setTextColor(0, 0, 0);
     doc.setFontSize(10);
-    doc.text(20, 50, "Puntos obtenidos: "+total+" Puntos");
+    doc.text(55, 50, "Puntos obtenidos: "+total+" Puntos");
 
     // Convertir el PDF a una cadena de datos URL para visualización
     var string = doc.output('datauristring');

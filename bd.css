@@ -1,95 +1,108 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Barlow', sans-serif;
+    background-color: #e0e7ff; /* Fondo suave azul claro */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #0056b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-#clave{
-	width: 95%;
-    margin: 0 auto;
-    padding: 10px;
+#cajaformulario, #cajadatos {
+    width: 45%;
+    background-color: #f9fafb; /* Fondo muy suave para diferenciar */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-#cajaformulario {
-    background-color: #fff;
-    padding: 20px;
+form p {
     margin-bottom: 20px;
-    border-radius: 5px;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type=text]:focus, textarea:focus {
+    border-color: #4DAFF6;
+    box-shadow: 0 0 5px rgba(77, 175, 246, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+input[type=button], a.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type=button] {
+    background-color: #4DAFF6;
+}
+
+input[type=button]:hover {
+    background-color: #4465FB;
+    transform: translateY(-2px);
+}
+
+a.button {
+    background-color: #FF5757;
+}
+
+a.button:hover {
+    background-color: #E94B4B;
+    transform: translateY(-2px);
 }
 
 #cajadatos {
-    background-color: #fff;
+    background-color: #f3f4f6; /* Fondo gris claro */
     padding: 20px;
-    border-radius: 5px;
-}
-
-#cajadatos div {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-#cajadatos div:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-
-input[type="text"],
-textarea {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 10px;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-input[type="button"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-input[type="button"]:hover {
-    background-color: #0056b3;
-}
-
-input[type="button"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="button"]:hover {
-    background-color: #0056b3;
-}
