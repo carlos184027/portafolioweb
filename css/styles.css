@@ -515,6 +515,45 @@ progress {
   }
 }
 
+.zapatera {
+  display: block;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: orange; /* Color del texto */
+  font-size: 26px; /* Tamaño del texto */
+  font-weight: bold; /* Peso del texto */
+  padding: 30px; /* Espaciado interno */
+  text-align: center;
+  border: 1px solid orange; /* Borde del enlace */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: rgba(255, 165, 0, 0.1); /* Fondo color naranja con opacidad */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el cambio de fondo y color */
+}
+
+.zapatera:hover {
+  background-color: orange; /* Fondo naranja al pasar el ratón */
+  color: white; /* Texto blanco al pasar el ratón */
+}
+
+.zapatera2 {
+  display: block;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: orange; /* Color del texto */
+  font-size: 26px; /* Tamaño del texto */
+  font-weight: bold; /* Peso del texto */
+  padding: 30px; /* Espaciado interno */
+  text-align: center;
+  border: 1px solid orange; /* Borde del enlace */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: rgba(255, 165, 0, 0.1); /* Fondo color naranja con opacidad */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el cambio de fondo y color */
+}
+
+.zapatera2:hover {
+  background-color: orange; /* Fondo naranja al pasar el ratón */
+  color: white; /* Texto blanco al pasar el ratón */
+}
+
+
 .display-3 {
   font-size: calc(1.525rem + 3.3vw);
   font-weight: 300;
